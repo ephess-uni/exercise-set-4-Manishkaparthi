@@ -23,7 +23,7 @@ def get_shutdown_events(logfile):
     
     for entry in shut_logs:
         
-        if 'Shutdown initiated' in line :
+        if 'Shutdown initiated' in entry :
             
             allentries.append(entry)
         
