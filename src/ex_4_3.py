@@ -19,8 +19,12 @@ def time_between_shutdowns(logfile):
     """
     Your docstring here.  Replace the pass keyword below with your implementation.
     """
-    pass
-
+    allentries = get_shutdown_events(logfile)
+    s1 = allentries[0]
+    s2 = allentries[-1]
+    timeof_s1= logstamp_to_datetime(s1.split()[1])
+    timeof_s2 = logstamp_to_datetime(s2.split()[1])
+    return timeof_s2-timeof_s1
 
 # >>>> The code below will call your function and print the results
 if __name__ == "__main__":
